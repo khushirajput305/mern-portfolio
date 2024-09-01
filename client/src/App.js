@@ -1,11 +1,12 @@
 
 import './App.css';
+import Layout from './components/Layout/Layout';
 
 function App() {
   return (
-    <div >
-     <h1>MY PORTFOLIO</h1> 
-    </div>
+    < >
+     <Layout/>
+    </>
   );
 }
 
