@@ -1,6 +1,7 @@
 import React from "react";
 import "./experience.css";
 import { SiReact } from "react-icons/si";
+import Fade from "react-reveal/Fade"
 
 import {
   VerticalTimeline,
@@ -11,6 +12,7 @@ const Experience = () => {
   return (
     <>
       <div className=" work" id="work">
+        <Fade left>
         <div className="container work-exp">
           <h2 className="col-12 mt-3 mb-1 text-center text-uppercase">
             Work experience
@@ -40,6 +42,7 @@ const Experience = () => {
             </VerticalTimelineElement>
           </VerticalTimeline>
         </div>
+        </Fade>
       </div>
     </>
   );

@@ -8,6 +8,7 @@ import Techstack from "./pages/Techstack/Techstack";
 import Experience from "./pages/workExperience/Experience";
 import ScrollToTop from "react-scroll-to-top";
 import { useTheme } from "./context/ThemeContext";
+import Tada from "react-reveal/Tada";
 
 function App() {
   const [theme] = useTheme();
@@ -24,7 +25,9 @@ function App() {
           <Contact />
         </div>
         <div className="footer pb-3 ms-3">
-          <h4 className="text-center">Made by ❤️ khushirajput &copy; 2024</h4>
+          <Tada>
+            <h4 className="text-center">Made by ❤️ khushirajput &copy; 2024</h4>
+          </Tada>
         </div>
       </div>
       <ScrollToTop

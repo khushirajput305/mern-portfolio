@@ -1,6 +1,6 @@
 import React from "react";
 import "./project.css";
-//import Spin from "react-reveal/Spin";
+import Spin from "react-reveal/Spin";
 const Projects = () => {
   return (
     <>
@@ -12,6 +12,7 @@ const Projects = () => {
         <p className="pb-3 text-center">👉 here are my projects</p>
         {/* card design */}
         <div className="row" id="ads">
+          <Spin>
           <div className="col-md-4">
             <div className="card rounded">
               <div className="card-image">
@@ -87,8 +88,10 @@ const Projects = () => {
               </div>
             </div>
           </div>
+          </Spin>
         </div>
         <div className="row" id="ads">
+          <Spin>
           <div className="col-md-4">
             <div className="card rounded">
               <div className="card-image">
@@ -158,10 +161,11 @@ const Projects = () => {
                   href="https://github.com/khushirajput305/livecovid-tracker"
                 >
                   View
-                </a>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
+          </Spin>
         </div>
       </div>
     </>

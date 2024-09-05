@@ -3,6 +3,8 @@ import { useTheme } from "../../context/ThemeContext";
 import "./home.css";
 import { BsFillMoonStarsFill,BsFillSunFill } from "react-icons/bs";
 import Typewriter from "typewriter-effect";
+import Fade from "react-reveal/Fade";
+
 import Resume from '../../assets/docs/Resume.pdf'
 const Home = () => {
   const [theme,setTheme] = useTheme()
@@ -17,6 +19,7 @@ const Home = () => {
           {theme==='light'?(<BsFillMoonStarsFill size={30}/>):(<BsFillSunFill size={30}/>)}
         </div>
         <div className="container home-content">
+          <Fade right>
           <h2>Hi👋 I'm a </h2>
           <h1>
             <Typewriter
@@ -27,10 +30,13 @@ const Home = () => {
               }}
             />
           </h1>
+          </Fade>
+          <Fade bottom>
           <div className="home-buttons">
             <button className="btn btn-hire">Hire Me</button>
             <a className="btn btn-cv" href={Resume} download={"your_name.pdf"}>My Resume</a>
           </div>
+          </Fade>
         </div>
       </div>
     </>
