@@ -9,12 +9,14 @@ import Experience from "./pages/workExperience/Experience";
 import ScrollToTop from "react-scroll-to-top";
 import { useTheme } from "./context/ThemeContext";
 import Tada from "react-reveal/Tada";
+import MobileNav from "./components/MobileNav/MobileNav";
 
 function App() {
   const [theme] = useTheme();
   return (
     <>
       <div id={theme}>
+        <MobileNav/>
         <Layout />
         <div className="container">
           <About />
