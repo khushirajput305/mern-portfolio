@@ -21,11 +21,11 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
-          alert('message sent successfully!')
+          alert("message sent successfully!");
         },
         (error) => {
           console.log(error.text);
-          alert('An error occured, please try again.')
+          alert("An error occured, please try again.");
         }
       );
   };
@@ -50,9 +50,12 @@ const Contact = () => {
                     <div className="row">
                       <h6>
                         Contact with
-                        <BsLinkedin color="blue" size={30} className="ms-2" />
-                        <BsGithub color="black" size={30} className="ms-2" />
-                        <BsTelegram color="blue" size={30} className="ms-2" />
+                        <a href="https://www.linkedin.com/in/khushi-rajput-163065250/">
+                          <BsLinkedin color="blue" size={30} className="ms-2" />
+                        </a>
+                        <a href="https://github.com/khushirajput305">
+                          <BsGithub color="black" size={30} className="ms-2" />
+                        </a>
                       </h6>
                     </div>
                     <form ref={form} onSubmit={sendEmail}>
