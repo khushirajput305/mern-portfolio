@@ -8,7 +8,7 @@
 - **Education Page**: Display of academic qualifications.
 - **Projects Page**: List and details of personal and professional projects.
 - **Experience Page**: Overview of work experiences and internships.
-- **Contact Page**: Options to connect via LinkedIn, WhatsApp, or send an email using an integrated form.
+- **Contact Page**: Options to connect via LinkedIn or send an email using an integrated form.
 - **Hire Me Button**: Uses WhatsApp API for direct contact regarding job opportunities.
   
 
