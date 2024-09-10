@@ -1,7 +1,8 @@
 import React from "react";
 import { useTheme } from "../../context/ThemeContext";
 import "./home.css";
-import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
+import { BsFillSunFill } from "react-icons/bs";
+import { MdOutlineDarkMode } from "react-icons/md";
 import Typewriter from "typewriter-effect";
 import Fade from "react-reveal/Fade";
 
@@ -17,7 +18,7 @@ const Home = () => {
       <div className="container-fluid home-container" id="home">
         <div className="theme-btn" onClick={handleTheme}>
           {theme === "light" ? (
-            <BsFillMoonStarsFill size={30} />
+            <MdOutlineDarkMode size={30} />
           ) : (
             <BsFillSunFill size={30} />
           )}

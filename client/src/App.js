@@ -26,7 +26,7 @@ function App() {
           <Experience />
           <Contact />
         </div>
-        <div className="footer pb-3 ms-3">
+        <div className="footer pb-4 ms-5">
           <Tada>
             <h4 className="text-center">Made by ❤️ khushirajput &copy; 2024</h4>
           </Tada>
@@ -34,8 +34,8 @@ function App() {
       </div>
       <ScrollToTop
         smooth
-        color="#f29f67"
-        style={{ backgroundColor: "#1e1e2c", borderRadius: "80px" }}
+        color="#fff"
+        style={{ backgroundColor: "#1e1e2c", borderRadius: "80px" ,color:"#fff"}}
       />
     </>
   );

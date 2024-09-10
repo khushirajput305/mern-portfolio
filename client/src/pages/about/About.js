@@ -8,7 +8,7 @@ const About = () => {
       <div className="about" id="about">
         <div className="row">
           <div className="col-md-6 col-xl-6 col-lg-6 col-xs-12 about-img">
-            <img src="profile.jpg" alt="profile" />
+            <img src="myprofile.jpg" alt="profile" />
           </div>
           <div className="col-md-6 col-xl-6 col-lg-6 col-xs-12 about-content">
             <h1>About Me</h1>

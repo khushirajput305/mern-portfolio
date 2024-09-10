@@ -1,10 +1,34 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./contact.css";
 import { BsLinkedin, BsGithub, BsTelegram } from "react-icons/bs";
 import Rotate from "react-reveal/Rotate";
-import LightSpeed from "react-reveal/LightSpeed"
+import LightSpeed from "react-reveal/LightSpeed";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_o3k31fl",
+        "template_spxpkhl",
+        form.current,
+        "REyqymmhFlRLBXYUv"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert('message sent successfully!')
+        },
+        (error) => {
+          console.log(error.text);
+          alert('An error occured, please try again.')
+        }
+      );
+  };
   return (
     <>
       <div className=" contact" id="contact">
@@ -14,7 +38,7 @@ const Contact = () => {
               <div className="card1">
                 <div className="row border-line">
                   <LightSpeed>
-                  <img src="contact.jpg" alt="" className="image" />
+                    <img src="contact.jpg" alt="" className="image" />
                   </LightSpeed>
                 </div>
               </div>
@@ -31,42 +55,44 @@ const Contact = () => {
                         <BsTelegram color="blue" size={30} className="ms-2" />
                       </h6>
                     </div>
+                    <form ref={form} onSubmit={sendEmail}>
+                      <div className="row px-3 mb-4">
+                        <div className="line" />
+                        <small className="or text-center">OR</small>
+                        <div className="line" />
+                      </div>
 
-                    <div className="row px-3 mb-4">
-                      <div className="line" />
-                      <small className="or text-center">OR</small>
-                      <div className="line" />
-                    </div>
-                    <div className="row px-3">
-                      <input
-                        type="text"
-                        name="name"
-                        placeholder="Enter your name"
-                        className="mb-3"
-                      />
-                    </div>
-                    <div className="row px-3">
-                      <input
-                        type="email"
-                        name="email"
-                        placeholder="Enter your email"
-                        className="mb-3"
-                      />
-                    </div>
-                    <div className="row px-3">
-                      <textarea
-                        type="text"
-                        name="msg"
-                        placeholder="Write your message"
-                        className="mb-3"
-                      />
-                    </div>
-                    <div className="row px-3">
-                      <button type="submit" className="button">
-                        {" "}
-                        SEND MESSAGE
-                      </button>
-                    </div>
+                      <div className="row px-3">
+                        <input
+                          type="text"
+                          name="from_name"
+                          placeholder="Enter your name"
+                          className="mb-3"
+                        />
+                      </div>
+                      <div className="row px-3">
+                        <input
+                          type="email"
+                          name="to_name"
+                          placeholder="Enter your email"
+                          className="mb-3"
+                        />
+                      </div>
+                      <div className="row px-3">
+                        <textarea
+                          type="text"
+                          name="message"
+                          placeholder="Write your message"
+                          className="mb-3"
+                        />
+                      </div>
+                      <div className="row px-3">
+                        <button type="submit" className="button">
+                          {" "}
+                          SEND MESSAGE
+                        </button>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </Rotate>
