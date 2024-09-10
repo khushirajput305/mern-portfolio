@@ -3,14 +3,14 @@
 ### A personal portfolio website built with the MERN stack (MongoDB, Express.js, React, Node.js) showcasing my projects, experience, education, and contact information.
 
 ## Features
-- **Home Page**: Brief introduction and links to sections of the portfolio.
+- **Home Page 🏠**: Brief introduction and links to sections of the portfolio.
 - **About Page**: Detailed information about me, my skills, and background.
 - **Education Page**: Display of academic qualifications.
 - **Projects Page**: List and details of personal and professional projects.
 - **Experience Page**: Overview of work experiences and internships.
 - **Contact Page**: Options to connect via LinkedIn or send an email using an integrated form.
 - **Hire Me Button**: Uses WhatsApp API for direct contact regarding job opportunities.
-  
+- **Resume Button** : To see my resume. 
 
 ## Tech Stack
 - **Frontend**: React.js, Bootstrap for responsive UI.
