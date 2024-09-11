@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import "./contact.css";
-import { BsLinkedin, BsGithub, BsTelegram } from "react-icons/bs";
+import { BsLinkedin, BsGithub } from "react-icons/bs";
 import Rotate from "react-reveal/Rotate";
 import LightSpeed from "react-reveal/LightSpeed";
 import emailjs from "emailjs-com";
@@ -16,7 +16,7 @@ const Contact = () => {
         "service_o3k31fl",
         "template_spxpkhl",
         form.current,
-        "REyqymmhFlRLBXYUv"
+       "r2fIrRXdoWEITkQUM"
       )
       .then(
         (result) => {

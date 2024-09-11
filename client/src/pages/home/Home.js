@@ -6,7 +6,7 @@ import { MdOutlineDarkMode } from "react-icons/md";
 import Typewriter from "typewriter-effect";
 import Fade from "react-reveal/Fade";
 
-import Resume from "../../assets/docs/Resume.pdf";
+import Resume from "../../assets/docs/MyResume.pdf";
 const Home = () => {
   const [theme, setTheme] = useTheme();
   //handle theme
@@ -40,7 +40,7 @@ const Home = () => {
             <div className="home-buttons">
               <a
                 className="btn btn-hire"
-                href="https://api.whatsapp.com/send?phone=8769497587"
+                href={`https://api.whatsapp.com/send?phone=${process.env.WHATSAPP_API_NUMBER}`}
                 rel="noreferrer"
                 target="_blank"
               >
