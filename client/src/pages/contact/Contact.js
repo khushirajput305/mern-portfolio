@@ -3,32 +3,31 @@ import "./contact.css";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import Rotate from "react-reveal/Rotate";
 import LightSpeed from "react-reveal/LightSpeed";
-import emailjs from "emailjs-com";
 
 const Contact = () => {
   const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_o3k31fl",
-        "template_spxpkhl",
-        form.current,
-       "r2fIrRXdoWEITkQUM"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          alert("message sent successfully!");
+  const sendEmail = async (templateParams) => {
+    try {
+      const response = await fetch('http://localhost:8000/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        (error) => {
-          console.log(error.text);
-          alert("An error occured, please try again.");
-        }
-      );
+        body:JSON.stringify({ templateParams }),
+      });
+  
+      if (response.ok) {
+        console.log('Email sent successfully!');
+      } else {
+        console.error('Failed to send email.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
   };
+  
+  
   return (
     <>
       <div className=" contact" id="contact">
@@ -105,6 +104,6 @@ const Contact = () => {
       </div>
     </>
   );
-};
+}
 
 export default Contact;

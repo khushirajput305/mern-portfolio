@@ -1,7 +1,7 @@
 import React from "react";
 import "./experience.css";
 import { SiReact } from "react-icons/si";
-import Fade from "react-reveal/Fade"
+import Fade from "react-reveal/Fade";
 
 import {
   VerticalTimeline,

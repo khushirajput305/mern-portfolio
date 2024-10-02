@@ -8,10 +8,9 @@ const About = () => {
       <div className="about" id="about">
         <div className="row">
           <div className="col-md-6 col-xl-6 col-lg-6 col-xs-12 about-img">
-            <img src="myprofile.jpg" alt="profile" />
+            <img src="https://fi-hatchbox-production-uploads.s3.amazonaws.com/posts/44299297_s.jpg" alt="profile" />
           </div>
           <div className="col-md-6 col-xl-6 col-lg-6 col-xs-12 about-content">
-            <h1>About Me</h1>
             <p>
               I am Khushi Rajput, a third-year student at MLV Textile
               Engineering College and a dedicated MERN stack developer. My
